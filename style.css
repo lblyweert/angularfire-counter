@@ -1,0 +1,72 @@
+body{
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    background: #2ecc71;
+    color: white;
+    overflow-y: scroll;
+}
+
+.page-header{
+    margin-top: 0;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+}
+
+h1{
+    font-weight: 300;
+}
+
+input {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    color: black;
+    font-size: 18px;
+    width: 330px;
+}
+
+.center-block{
+    text-align: center;
+    width: 33%;
+    display: inline-block;
+}
+
+.center-block-2{
+    text-align: center;
+}
+
+h2{
+    font-size: 10em;
+    font-weight: 300;
+}
+
+.btn-primary,.btn-danger{
+    font-size: 5em;
+    font-weight: 300;
+    padding: 0 25px;
+    line-height: 1em;
+}
+
+.reset{
+    margin-top: 15px;
+    font-size: 3em;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+@media only screen and (max-width:768px){
+    .btn-primary,.btn-danger{
+        font-size: 7em;
+        padding: 0 30px;
+    }
+}

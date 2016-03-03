@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html ng-app="CounterApp">
+<head>
+    <meta name="robots" content="noindex,follow"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Bob vs Arnauld : le choc des CM</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.0/angularfire.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+
+<div class="container">
+    <div class="page-header">
+        <h1>Bob/Arnauld : le choc des CM</h1>
+        <h4>Votez pour le meilleur CM</h4>
+    </div>
+    <div class="center-block">
+        <h1>Bob</h1>
+        <h2>{{bob.score}}</h2>
+        <button type="button" class="btn btn-primary" ng-click="addPointBob()">+</button>
+        <button type="button" class="btn btn-danger" ng-click="removePointBob()">-</button>
+        <input type="text" ng-model="bob.comment" placeholder="Lâche un com" ng-change="updateComments()" />
+    </div>
+    <div class="center-block">
+        <h1>VS</h1>
+    </div>
+    <div class="center-block">
+        <h1>Arnauld</h1>
+        <h2>{{arnauld.score}}</h2>
+        <button type="button" class="btn btn-primary" ng-click="addPointArnauld()">+</button>
+        <button type="button" class="btn btn-danger" ng-click="removePointArnauld()">-</button>
+        <input type="text" ng-model="arnauld.comment" placeholder="Lâche un com" ng-change="updateComments()" />
+    </div>
+    <!--
+    <div class="center-block-2">
+        <button type="button" class="btn btn-default reset" ng-click="resetStats()">Reset</button>
+    </div>
+    -->
+</div>
+
+<div class="footer">
+    Application réalisée par un manchot avec AngularJS et Firebase
+</div>
+
+</body>
+</html>
